@@ -19,7 +19,7 @@
     <main class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <form action="rteste.php" method="post">
+                <form action="processaRespostas.php" name="respostas" method="POST">
                     <div class="questao">
                         <span class="titulo-pergunta">Na escola, você prefere assuntos ligados à:</span>
                         <div>
@@ -119,7 +119,7 @@
                             <label for="q5d">ngenhosidade e rapidez mental</label>
                         </div>
                     </div>
-
+                        <!--
                     <div class="questao">
                         <span class="titulo-pergunta">Costuma confiar mais em:</span>
                         <div>
@@ -220,76 +220,233 @@
 
                     
                     <div class="questao">
-                        <span class="titulo-pergunta">Você se considera uma pessoa:</span>
+                        <span class="titulo-pergunta">Antes de agir, você analisa:</span>
                         <div>
-                            <input type="radio" name="questao4" value="a" id="q4a">
-                            <label for="q4a">Prática e hábil para improvisar </label>
+                            <input type="radio" name="questao11" value="a" id="q11a">
+                            <label for="q11a">Ferramentas, instrumentos e equipamentos  </label>
                         </div>
                         <div>
-                            <input type="radio" name="questao4" value="b" id="q4b">
-                            <label for="q4b">Batalhadora, que sabe o que quer </label>
+                            <input type="radio" name="questao11" value="b" id="q11b">
+                            <label for="q11b"> ---  </label>
                         </div>
                         <div>
-                            <input type="radio" name="questao4" value="c" id="q4c">
-                            <label for="q4c"> Preocupada com questões humanas </label>
+                            <input type="radio" name="questao11" value="c" id="q11c">
+                            <label for="q11c">Pessoas de todos os níveis sociais e culturais</label>
                         </div>
                         <div>
-                            <input type="radio" name="questao4" value="d" id="q4d">
-                            <label for="q4d">Capacitada para criar e inventar</label>
-                        </div>
-                    </div>
-                    <div class="questao">
-                        <span class="titulo-pergunta">Você se considera uma pessoa:</span>
-                        <div>
-                            <input type="radio" name="questao4" value="a" id="q4a">
-                            <label for="q4a">Prática e hábil para improvisar </label>
-                        </div>
-                        <div>
-                            <input type="radio" name="questao4" value="b" id="q4b">
-                            <label for="q4b">Batalhadora, que sabe o que quer </label>
-                        </div>
-                        <div>
-                            <input type="radio" name="questao4" value="c" id="q4c">
-                            <label for="q4c"> Preocupada com questões humanas </label>
-                        </div>
-                        <div>
-                            <input type="radio" name="questao4" value="d" id="q4d">
-                            <label for="q4d">Capacitada para criar e inventar</label>
+                            <input type="radio" name="questao11" value="d" id="q11d">
+                            <label for="q11d">Sistemas e construção</label>
                         </div>
                     </div>
                     <div class="questao">
-                        <span class="titulo-pergunta">Você se considera uma pessoa:</span>
+                        <span class="titulo-pergunta">Gosta quando as pessoas:</span>
                         <div>
-                            <input type="radio" name="questao4" value="a" id="q4a">
-                            <label for="q4a">Prática e hábil para improvisar </label>
+                            <input type="radio" name="questao12" value="a" id="q12a">
+                            <label for="q12a">O surpreendem com um presente </label>
                         </div>
                         <div>
-                            <input type="radio" name="questao4" value="b" id="q4b">
-                            <label for="q4b">Batalhadora, que sabe o que quer </label>
+                            <input type="radio" name="questao12" value="b" id="q12b">
+                            <label for="q12b">Expressam gratidão por algo que fez </label>
                         </div>
                         <div>
-                            <input type="radio" name="questao4" value="c" id="q4c">
-                            <label for="q4c"> Preocupada com questões humanas </label>
+                            <input type="radio" name="questao12" value="c" id="q12c">
+                            <label for="q12c">Reconhecem sua personalidade singular</label>
                         </div>
                         <div>
-                            <input type="radio" name="questao4" value="d" id="q4d">
-                            <label for="q4d">Capacitada para criar e inventar</label>
+                            <input type="radio" name="questao12" value="d" id="q12d">
+                            <label for="q12d">>Reconhecem sua inteligência</label>
+                        </div>
+                    </div>
+                    <div class="questao">
+                        <span class="titulo-pergunta">Você costuma abraçar um novo projeto:</span>
+                        <div>
+                            <input type="radio" name="questao13" value="a" id="q13a">
+                            <label for="q13a">Com a cara e a coragem</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="questao13" value="b" id="q13b">
+                            <label for="q13b">Guiado pela experiência </label>
+                        </div>
+                        <div>
+                            <input type="radio" name="questao13" value="c" id="q13c">
+                            <label for="q13c">Confiando na intuição e na criatividade</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="questao13" value="d" id="q13d">
+                            <label for="q13d">Confiando na intuição e na criatividade</label>
                         </div>
                     </div>
 
-
+                    <div class="questao">
+                        <span class="titulo-pergunta">Geralmente, você prefere agir:</span>
+                        <div>
+                            <input type="radio" name="questao14" value="a" id="q14a">
+                            <label for="q14a">>No calor do momento</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="questao14" value="b" id="q14b">
+                            <label for="q14b">Com segurança e conforme o costume</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="questao14" value="c" id="q14c">
+                            <label for="q14c">Quando está inspirado</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="questao14" value="d" id="q14d">
+                            <label for="q14d">Quando um problema o desafia</label>
+                        </div>
+                    </div>
+                    <div class="questao">
+                        <span class="titulo-pergunta">Você fica motivado quando:</span>
+                        <div>
+                            <input type="radio" name="questao15" value="a" id="q15a">
+                            <label for="q15a">Tem a oportunidade de superar obstáculos</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="questao15" value="b" id="q15b">
+                            <label for="q15b">Ja executou por varias vezes a ação</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="questao15" value="c" id="q15c">
+                            <label for="q15c">Harmonia e inspiração guiam a atividade</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="questao15" value="d" id="q15d">
+                            <label for="q15d">Há liberdade para planejar um futuro</label>
+                        </div>
+                    </div>
+                    <div class="questao">
+                        <span class="titulo-pergunta">Em atividades em grupo, você prefere:</span>
+                        <div>
+                            <input type="radio" name="questao16" value="a" id="q16a">
+                            <label for="q16a">As desafiadoras, que exigem ação rápida</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="questao16" value="b" id="q16b">
+                            <label for="q16b">Administrar os recursos disponíveis</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="questao16" value="c" id="q16c">
+                            <label for="q16c">Motivar as pessoas para darem o melhor de si</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="questao16" value="d" id="q16d">
+                            <label for="q16d"> Descartar imediatamente o que não serve para a ação</label>
+                        </div>
+                    </div>
+                    <div class="questao">
+                        <span class="titulo-pergunta">Liderar é uma atividade que gosta de exercer:</span>
+                        <div>
+                            <input type="radio" name="questao17" value="a" id="q17a">
+                            <label for="q17a">Por pouco tempo e dependendo da situação</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="questao17" value="b" id="q17b">
+                            <label for="q17b">Quando pode comandar do inicio ao termino</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="questao17" value="c" id="q17c">
+                            <label for="q17c">Quando é preciso identificar e agrupar talentos</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="questao17" value="d" id="q17d">
+                            <label for="q17d">Quando o raciocínio estratégico é importante</label>
+                        </div>
+                    </div>
+                    <div class="questao">
+                        <span class="titulo-pergunta">Em uma escola, você gostaria de ser:</span>
+                        <div>
+                            <input type="radio" name="questao18" value="a" id="q18a">
+                            <label for="q18a">Professor de educação física</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="questao18" value="b" id="q18b">
+                            <label for="q18b">Diretor</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="questao18" value="c" id="q18c">
+                            <label for="q18c">Professor de literatura</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="questao18" value="d" id="q18d">
+                            <label for="q18d">Professor de matemática ou física</label>
+                        </div>
+                    </div>
+                    <div class="questao">
+                        <span class="titulo-pergunta">É um elogio quando se referem a você como:</span>
+                        <div>
+                            <input type="radio" name="questao19" value="a" id="q19a">
+                            <label for="q19a">Corajoso, otimista e divertido</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="questao19" value="b" id="q19b">
+                            <label for="q19b">Cauteloso, responsável e aplicado</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="questao19" value="c" id="q19c">
+                            <label for="q19c">Harmonizador, íntegro e sábio</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="questao19" value="d" id="q19d">
+                            <label for="q19d">Uma mente brilhante</label>
+                        </div>
+                    </div>
+                    <div class="questao">
+                        <span class="titulo-pergunta">Como você lida com a invasão de privacidade:</span>
+                        <div>
+                            <input type="radio" name="questao20" value="a" id="q20a">
+                            <label for="q20a">Simplesmente ignora</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="questao20" value="b" id="q20b">
+                            <label for="q20b">Fica irritado </label>
+                        </div>
+                        <div>
+                            <input type="radio" name="questao20" value="c" id="q20c">
+                            <label for="q20c">Repreende a pessoa</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="questao20" value="d" id="q20d">
+                            <label for="q20d">Repreende a pessoa</label>
+                        </div>
+                    </div>
+                    <div class="questao">
+                        <span class="titulo-pergunta">Frase que têm a ver com você:</span>
+                        <div>
+                            <input type="radio" name="questao21" value="a" id="q21a">
+                            <label for="q21a">“Deixo a vida me levar...”</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="questao21" value="b" id="q21b">
+                            <label for="q21b">“Manda quem pode, obedece quem tem juízo” </label>
+                        </div>
+                        <div>
+                            <input type="radio" name="questao21" value="c" id="q21c">
+                            <label for="q21c">“Para seu próprio interesse, seja verdadeiro”</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="questao21" value="d" id="q21d">
+                            <label for="q21d">“Penso, logo existo”</label>
+                        </div>
+                    </div>-->
+                   <div class="col-md-12 centro" >
+                        <button class="btn btn-success  btn-lg" id="btnEnviar" type="submit">Enviar</button>
+                    </div> 
                 </form>
             </div>
         </div>
-
     </main>
+    <section id="perfil">
 
-    <footer>
+    </section>
+
+    <footer id="footer">
         <div>
-
+            <div> Luiz Carlos Costa Moitinho -  MTI &copy;</div>
+        
         </div>
     </footer>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/lib.js"></script>
 </body>
 
 </html>

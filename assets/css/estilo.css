@@ -66,7 +66,7 @@
     cursor: pointer;
     line-height: 20px;
     display: inline-block;
-    color: #666;
+    color: rgb(47, 45, 45);
 }
 [type="radio"]:checked + label:before,[type="radio"]:not(:checked) + label:before {
     content: '';
@@ -75,7 +75,7 @@
     top: 0;
     width: 18px;
     height: 18px;
-    border: 1px solid #ddd;
+    border: 1px solid rgb(139, 134, 134);
     border-radius: 100%;
     background: #fff;
 }
@@ -104,14 +104,31 @@
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #F4F4F4;
+    background-color: rgb(204, 196, 196);
 }
 
 ::-webkit-scrollbar {
-    width: 6px;
+    width: 12px;
     background: #f4f4f4
 }
 
 ::-webkit-scrollbar-thumb{
     background:rgb(243, 218, 76);
+}
+
+
+#footer{
+    padding:2%;
+    margin-top:2%;
+    background-color:rgb(114, 113, 113);
+    height: 120px;
+    text-align: center;
+    color:#fff;
+    font-size: 20px;
+}
+
+.centro{
+    display: flex;
+    flex-direction: column;
+    align-items: center
 }
