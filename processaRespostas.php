@@ -1,8 +1,7 @@
 <?php
-define("QTD_QUESTOES","5");
-#recebendo valores
-$respostasFormulario =  pegarRespostasFormulario();
-
+define("QTD_QUESTOES","3");
+header('Content-Type: text/html; charset=utf-8');// para formatar corretamente os acentos
+$respostasFormulario = json_decode($_POST['rel'], true);
 if(itensVazios($respostasFormulario)){
     // informa que erro, todas as questoes devem ser assinaladas!
     echo "<script> alert('Ops! Todos os itens devem ser assinaladas!')
@@ -30,9 +29,8 @@ else{
     }
     else{
         //verificar qual item possui mais "pontos"
-               //verificar qual item possui mais "pontos"
         $texto="";
-        switch(itensMaisAssinalado($letrasAssinaladas)){
+        switch(itemMaisAssinalado($letrasAssinaladas)){
             case 'a':
                 $texto = "
                 <div>
@@ -61,7 +59,6 @@ else{
 
                 </div>
                 ";
-  
                 break;
             case 'b':
                 $texto="
@@ -150,7 +147,8 @@ else{
             default:
                 $texto="
                     <div>
-                        Ops!  Nosso sistema não conseguiu identificar o seu perfil profissional!
+                        Ops!  Nosso sistema não conseguiu identificar o seu perfil profissional.
+                        Estamos melhorando nossos algoritmos!
                     </div>
                 ";
         }
@@ -159,15 +157,30 @@ else{
 }
 
 
-function itensMaisAssinalado($letrasAssinaladas){
+// ============ FUNCOES ====================
+
+function itemMaisAssinalado($letrasAssinaladas){
+    $empate=false;
     $letraMaisMarcada= 'a';
     $maior = $letrasAssinaladas['a'];
     foreach($letrasAssinaladas as $letra => $quantidadeMarcada){
-        if($quantidadeMarcada > $maior)
+        echo $quantidadeMarcada.">". $maior."<br>";
+        if($quantidadeMarcada > $maior){
             $letraMaisMarcada =  $letra;
+            $maior = $quantidadeMarcada;
+            $empate = false;
+        } 
+        else if($quantidadeMarcada == $maior){
+            $empate = true ;
+        }
     }
-    echo "> ".$letra;
-    return $letra;
+    if($empate){
+            return 'default';
+    }else{
+        echo "> ".$letraMaisMarcada;
+        return $letraMaisMarcada;
+    }
+   
 }
 
 function quantificaItensAssinalados($respostasFormulario,&$letrasAssinaladas){
@@ -176,7 +189,6 @@ function quantificaItensAssinalados($respostasFormulario,&$letrasAssinaladas){
     }
 }
 
-// ============ FUNCOES ====================
 
 function pegarRespostasFormulario(){
     $arrayRespostas =  array();
@@ -187,8 +199,9 @@ function pegarRespostasFormulario(){
             $arrayRespostas['questao'.$i]="";
         }
     }
-    return $arrayRespostas;
+    return $arrayRespostas;    
 }
+
 function somaRepostas($assinalada,&$letrasAssinaladas){
     switch($assinalada){
         case 'a':

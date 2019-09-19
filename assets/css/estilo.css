@@ -7,14 +7,13 @@
 #barra-navegacao{
     display:block; 
     background-color: rgb(35, 44, 116);
-    height:70px;
     display: flex;
     flex-direction: column
    
 }
 #titulo{
-    font-weight: 200;
-    font-size: 40px;
+    font-weight: 400;
+    font-size: 48px;
     color:rgb(237, 242, 243);
 }
 #subtitulo{
