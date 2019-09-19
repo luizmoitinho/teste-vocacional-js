@@ -4,9 +4,12 @@
 }
 .clear { clear: both; }
 .table{display: table;}
+html{
+    overflow-x: hidden;
+}
 #barra-navegacao{
     display:block; 
-    background-color: rgb(35, 44, 116);
+    background-color:  #993399;
     display: flex;
     flex-direction: column
    
@@ -18,7 +21,7 @@
 }
 #subtitulo{
     font-size: 26px;
-    color:rgb(255, 255, 255);
+    color:rgb(246, 23, 23);
     float: right;
     margin-top: 1%;
     margin-right: 5%;
@@ -37,7 +40,7 @@
     padding: 2%;
     margin:2%;
     transition: .4s ease-in;
-    border:1px solid #fff;
+    border:1px solid rgb(202, 192, 192);
     font-size:18px;
 }
 .questao:hover{
@@ -47,7 +50,7 @@
 }
 .titulo-pergunta{
     font-weight: 400;
-    color:rgb(63, 77, 177);
+    color: #993399;
     font-size: 24px;
     display: block;
     margin-bottom: 10px;
@@ -131,3 +134,71 @@
     flex-direction: column;
     align-items: center
 }
+
+
+#perfil-profissional{
+    margin-top:2%;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    padding:2%;
+    color:#000;
+    font-size:20px;
+    animation-duration: 3s;
+    animation-name: slidein;
+    
+}
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+#perfil-profissional span{
+    text-align: center;
+    font-size:25px;
+    font-weight: 600;
+    color:#993399;
+}
+
+
+/* ===================== ICONE DE CARREGAR  ==============================*/
+.espera-usuario {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, .8);
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.icon-load {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgb(56, 65, 153);
+    border: 8px dotted rgba(58, 56, 56, 0.1);
+    border-left-color:rgb(243, 218, 76);
+    animation: spin 1s linear infinite;
+    margin: auto;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+

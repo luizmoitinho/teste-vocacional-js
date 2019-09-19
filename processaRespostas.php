@@ -1,5 +1,5 @@
 <?php
-define("QTD_QUESTOES","3");
+define("QTD_QUESTOES","1");
 header('Content-Type: text/html; charset=utf-8');// para formatar corretamente os acentos
 $respostasFormulario = json_decode($_POST['rel'], true);
 if(itensVazios($respostasFormulario)){
@@ -12,9 +12,6 @@ else{
     // todas as questoes foram preenchidas corretamente!
     $letrasAssinaladas = array("a"=>0,"b"=>0,"c"=>0,"d"=>0);  
     quantificaItensAssinalados($respostasFormulario,$letrasAssinaladas);
-    echo"<pre>";
-    var_dump($letrasAssinaladas);
-
     if( ($letrasAssinaladas['a'] == $letrasAssinaladas['b']) && $letrasAssinaladas['c'] == $letrasAssinaladas['d']){
         echo "<b>A sua principal característica é :</B><p>
         O movimento gosta de novidades, apresentando destreza fisica e boa expressão corporal.Tem facilidade
@@ -29,38 +26,34 @@ else{
     }
     else{
         //verificar qual item possui mais "pontos"
-        $texto="";
-        switch(itemMaisAssinalado($letrasAssinaladas)){
-            case 'a':
-                $texto = "
-                <div>
-                    <div>
-                        <span>A sua principal característica é :</span>
-                        <p>
-                            O movimento, gosta de novidades. Apresenta destreza física e boa expressão corporal.
-                            Não gosta de rotina e sim o trabalho como uma fonte de prazer.
-                        </p>
-                        <div>
-                            <span>Carreiras apropriadas</span>
-                            <ol>
-                                <li>Esportista</li>
-                                <li>Artista Plástico</li>
-                                <li>Ator</li>
-                                <li>Estilista</li>
-                            </ol>
-                            <ol>
-                                <li>Jornalista</li>
-                                <li>Médico</li>
-                                <li>Relações públicas</li>
-                                <li>Chefe de Cozinha</li>
-                            </ol>
-                        </div>
-                    </div>
 
-                </div>
-                ";
-                break;
-            case 'b':
+        switch(itemMaisAssinalado($letrasAssinaladas)){
+            case 'a':?>
+                    <span><?php echo"A sua principal característica é"?></span>
+                    <p>
+                        <?php echo"O movimento, gosta de novidades. Apresenta destreza física e boa expressão corporal.
+                                Não gosta de rotina e sim o trabalho como uma fonte de prazer.";
+                        ?>
+                    </p>
+                    <div>
+                        <span><?php echo"Carreiras apropriadas"?></span>
+                            
+                        <ol>
+                            <li><?php echo"Esportista" ?></li>
+                            <li><?php echo"Artista Plástico"?></li>
+                            <li><?php echo"Ator"?></li>
+                            <li><?php echo"Estilista"?></li>
+                        </ol>
+                        <ol>
+                            <li><?php echo"Jornalista"?></li>
+                            <li><?php echo"Médico"?></li>
+                            <li><?php echo"Relações públicas"?></li>
+                            <li><?php echo"Chefe de Cozinha"?></li>
+                        </ol>
+                    </div>
+            
+                <?php break;?>
+           <?php case 'b':
                 $texto="
                 <div>
                     <div>
@@ -153,18 +146,17 @@ else{
                 ";
         }
     }
-    echo $texto;
 }
 
 
 // ============ FUNCOES ====================
 
 function itemMaisAssinalado($letrasAssinaladas){
+    $i=0;
     $empate=false;
     $letraMaisMarcada= 'a';
-    $maior = $letrasAssinaladas['a'];
+    $maior = 0;
     foreach($letrasAssinaladas as $letra => $quantidadeMarcada){
-        echo $quantidadeMarcada.">". $maior."<br>";
         if($quantidadeMarcada > $maior){
             $letraMaisMarcada =  $letra;
             $maior = $quantidadeMarcada;
@@ -172,15 +164,14 @@ function itemMaisAssinalado($letrasAssinaladas){
         } 
         else if($quantidadeMarcada == $maior){
             $empate = true ;
+            echo"<br>Maior  $i= ".$maior;
         }
     }
-    if($empate){
+    if($empate)
             return 'default';
-    }else{
-        echo "> ".$letraMaisMarcada;
+    else
         return $letraMaisMarcada;
-    }
-   
+
 }
 
 function quantificaItensAssinalados($respostasFormulario,&$letrasAssinaladas){

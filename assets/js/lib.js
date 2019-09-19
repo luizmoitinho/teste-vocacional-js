@@ -1,34 +1,47 @@
 
 
-const qtdQuestoes =3;
+const qtdQuestoes =1;
 
 window.addEventListener("load",function(){
     let btnEnviar =  document.getElementById("btnEnviar");
-    btnEnviar.addEventListener("click",function(){
+   // btnEnviar.addEventListener("load",function(){
         let inputsRadios =  getInputsRadio();
         let respostas = new Object();
         let condicaoFormulario = validarFormulario(inputsRadios,respostas)
         if(condicaoFormulario==true){
-            processarRespostas(respostas);
+           // carregar();
+            processarRespostas(respostas,function(callback){
+               // destroiCarregar()
+            });
         }
         else{
             //questoes em branco
             alert("Assinale todas as questoes!!");
         }
 
-    });
+    //});
 });
 
-function processarRespostas(questoes){
+function processarRespostas(questoes,callback){
     let dados = JSON.stringify(questoes);
     $.ajax({
         type:'POST',
         url:"processaRespostas.php",
         data: {'rel': dados},
+        
         success: function (html){
-            $('#perfil-profissional').html(html);
-        }   
-
+            callback(
+               
+                $('html, body').animate( { scrollTop: $(document).height()}, 700),
+                  
+                $('#perfil-profissional').css("visibility","visible"),
+                $('#perfil-profissional').html(html)
+            );
+            
+        },
+        error: function () {
+            alert("Ocorreu um erro no processamento dos dados!");
+         }
     });
 }
 
@@ -63,3 +76,20 @@ function exibirPerfilProfissional(texto){
     let divPerfil = document.getElementById("perfil-profissional");
     divPerfil.innerHTML = texto;
 }
+
+
+function carregar() {
+    let divCarregar = document.createElement("div");
+    let iconCarregar = document.createElement("div");
+    divCarregar.setAttribute("id", "carregar");
+    divCarregar.insertAdjacentElement("afterbegin", iconCarregar);
+    iconCarregar.setAttribute("class", "icon-load")
+    divCarregar.setAttribute("class", "espera-usuario container-fluid");
+    let fundo = document.getElementById("corpo");
+    fundo.insertAdjacentElement("afterbegin", divCarregar);
+  }
+
+function destroiCarregar() {
+    let carregar = document.getElementById("carregar");
+    carregar.parentNode.removeChild(carregar);
+  }
