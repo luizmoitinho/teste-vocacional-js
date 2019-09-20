@@ -5,7 +5,7 @@ const qtdQuestoes =21;
 window.addEventListener("load",function(){
     $('html, body').animate( { scrollTop: 0});
     let btnEnviar =  document.getElementById("btnEnviar");
-    btnEnviar.addEventListener("click",function(){
+    btnEnviar.addEventListener("load",function(){
         let inputsRadios =  getInputsRadio();
         let respostas = new Object();
         let condicaoFormulario = validarFormulario(inputsRadios,respostas)
