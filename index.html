@@ -11,9 +11,9 @@
 </head>
 
 <body class="clear cor-fundo" id="corpo">
-    <header id="barra-navegacao" class="navbar navbar-expand-lg table">
+    <header id="barra-navegacao" class="navbar navbar-expand-lg">
         <span id="titulo">Teste <span class="cor-amarelo">Vocacional</span> </span>
-        <!--<span id="subtitulo">Descubra sua vocação!</span>-->
+        
     </header>
     <main class="container-fluid">
         <div class="row">
@@ -22,7 +22,7 @@
                     <div class="questao">
                         <span class="titulo-pergunta">Na escola, você prefere assuntos ligados à:</span>
                         <div>
-                            <input type="radio" name="questao1" value="a" id="q1a" checked>
+                            <input type="radio" name="questao1" value="a" id="q1a">
                             <label for="q1a">Arte, esportes e atividades extracurriculares </label>
                         </div>
                         <div>
@@ -39,7 +39,7 @@
                         </div>
 
                     </div>
-                    <!-- <div class="questao">
+                    <div class="questao">
                         <span class="titulo-pergunta">Você prefere levar sua vida:</span>
                         <div>
                             <input type=radio name="questao2" value="a" id="q2a">
@@ -118,8 +118,7 @@
                             <input type="radio" name="questao5" value="d" id="q5d">
                             <label for="q5d">Engenhosidade e rapidez mental</label>
                         </div>
-                    </div>
-                       
+                    </div>  
                     <div class="questao">
                         <span class="titulo-pergunta">Costuma confiar mais em:</span>
                         <div>
@@ -428,11 +427,11 @@
                             <input type="radio" name="questao21" value="d" id="q21d">
                             <label for="q21d">“Penso, logo existo”</label>
                         </div>
-                    </div>-->
-                  
+                    </div>
+
                 </form>
                 <div class="col-md-12 centro" >
-                    <button class="btn btn-success  btn-lg" id="btnEnviar" type="submit">Enviar</button>
+                    <button class="btn btn-info  btn-lg" id="btnEnviar" type="submit">Enviar</button>
                 </div> 
             </div>
         </div>
@@ -442,16 +441,20 @@
             <div class="col-md-12" id="perfil-profissional">
                 
             </div>
-        
         </div>
     </div>
 
-    
 
-    <footer id="footer">
-        <div>
-            <div> Luiz Carlos Costa Moitinho -  MTI &copy;</div>
-        
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="col-md-12" id="rodape">
+                <div> 
+                  <span class="cor-amarelo"> @Author: </span>Luiz Carlos Costa Moitinho -  MTI &copy; 2019
+                </div>
+                <div> 
+                  <span class="cor-amarelo"> @GIT: </span> <a href="https://github.com/luizmoitinho">Luizmoitinho</a>
+                </div>
+            </div>
         </div>
     </footer>
     <script src="assets/js/jquery.min.js"></script>

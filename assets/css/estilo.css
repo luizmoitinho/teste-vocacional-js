@@ -1,54 +1,62 @@
-*{
-    margin:0;
+* {
+    margin: 0;
     padding: 0;
 }
-.clear { clear: both; }
-.table{display: table;}
-html{
+
+.clear {
+    clear: both;
+}
+
+.table {
+    display: table;
+}
+
+html {
     overflow-x: hidden;
 }
-#barra-navegacao{
-    display:block; 
-    background-color:  #993399;
+
+#barra-navegacao {
+    display: block;
+    background-color: #812081;
     display: flex;
-    flex-direction: column
-   
+    flex-direction: column;
+
 }
-#titulo{
+
+#titulo {
+    
     font-weight: 400;
-    font-size: 48px;
-    color:rgb(237, 242, 243);
+    font-size: 38px;
+    color: rgb(237, 242, 243);
 }
-#subtitulo{
-    font-size: 26px;
-    color:rgb(246, 23, 23);
-    float: right;
-    margin-top: 1%;
-    margin-right: 5%;
+
+
+.cor-amarelo {
+    color: rgb(255, 231, 95);
 }
-.cor-amarelo{
-    color:rgb(243, 218, 76);
-}
-.cor-fundo{
+
+.cor-fundo {
     background-color: rgb(228, 226, 226)
 }
 
 
-.questao{
-    background-color:#fff; 
-    border-radius:10px 10px; 
+.questao {
+    background-color: #fff;
+    border-radius: 10px 10px;
     padding: 2%;
-    margin:2%;
+    margin: 2%;
     transition: .4s ease-in;
-    border:1px solid rgb(202, 192, 192);
-    font-size:18px;
+    border: 1px solid rgb(202, 192, 192);
+    font-size: 18px;
 }
-.questao:hover{
+
+.questao:hover {
     transform: scale(1.02);
     transition: .4s ease-in;
     box-shadow: -4px 2px 10px #666;
 }
-.titulo-pergunta{
+
+.titulo-pergunta {
     font-weight: 400;
     color: #993399;
     font-size: 24px;
@@ -58,11 +66,14 @@ html{
 }
 
 
-[type="radio"]:checked, [type="radio"]:not(:checked) {
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
     position: absolute;
     left: -9999px;
 }
-[type="radio"]:checked + label,[type="radio"]:not(:checked) + label{
+
+[type="radio"]:checked+label,
+[type="radio"]:not(:checked)+label {
     position: relative;
     padding-left: 28px;
     cursor: pointer;
@@ -70,7 +81,9 @@ html{
     display: inline-block;
     color: rgb(47, 45, 45);
 }
-[type="radio"]:checked + label:before,[type="radio"]:not(:checked) + label:before {
+
+[type="radio"]:checked+label:before,
+[type="radio"]:not(:checked)+label:before {
     content: '';
     position: absolute;
     left: 0;
@@ -81,8 +94,9 @@ html{
     border-radius: 100%;
     background: #fff;
 }
-[type="radio"]:checked + label:after,
-[type="radio"]:not(:checked) + label:after {
+
+[type="radio"]:checked+label:after,
+[type="radio"]:not(:checked)+label:after {
     content: '';
     width: 12px;
     height: 12px;
@@ -94,12 +108,14 @@ html{
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
 }
-[type="radio"]:not(:checked) + label:after {
+
+[type="radio"]:not(:checked)+label:after {
     opacity: 0;
     -webkit-transform: scale(0);
     transform: scale(0);
 }
-[type="radio"]:checked + label:after {
+
+[type="radio"]:checked+label:after {
     opacity: 1;
     -webkit-transform: scale(1);
     transform: scale(1);
@@ -114,60 +130,91 @@ html{
     background: #f4f4f4
 }
 
-::-webkit-scrollbar-thumb{
-    background:rgb(243, 218, 76);
+::-webkit-scrollbar-thumb {
+    background: rgb(243, 218, 76);
 }
 
 
-#footer{
-    padding:2%;
-    margin-top:2%;
-    background-color:rgb(114, 113, 113);
-    height: 120px;
-    text-align: center;
-    color:#fff;
-    font-size: 20px;
-}
-
-.centro{
+.centro {
     display: flex;
     flex-direction: column;
     align-items: center
 }
 
 
-#perfil-profissional{
-    margin-top:2%;
+#perfil-profissional {
+    margin-top: 2%;
     visibility: hidden;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     background-color: #ffffff;
-    padding:2%;
-    color:#000;
-    font-size:20px;
+    padding: 4%;
+    color: #000;
+    font-size: 20px;
     animation-duration: 3s;
     animation-name: slidein;
-    
-}
-@keyframes slidein {
-    from {
-      margin-left: 100%;
-      width: 300%
-    }
-  
-    to {
-      margin-left: 0%;
-      width: 100%;
-    }
-  }
-#perfil-profissional span{
-    text-align: center;
-    font-size:25px;
-    font-weight: 600;
-    color:#993399;
+
 }
 
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+.titulo-perfil {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    color: #993399;
+    margin: 1%;
+}
+
+.descricao-perfil {
+    text-align: justify;
+}
+
+.lista-profissoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid #ccc;
+
+}
+
+.profissoes:first-child {
+    display: flex;
+    flex-direction: column;
+    border-right: 4px dotted #993399;
+    text-align: center;
+    margin-bottom: 2px;
+}
+
+.profissoes:last-child {
+    display: flex;
+    flex-direction: column;
+    text-align: center
+}
+
+@media (min-width: 751px) {
+    .profissoes:first-child {
+        border-right: 4px dotted #993399;
+        border-bottom: none;
+    }
+}
+
+@media (min-width: 250px) and (max-width: 750px) {
+    .profissoes:first-child {
+        border-right: none;
+        border-bottom: 4px dotted #993399;
+    }
+}
 
 /* ===================== ICONE DE CARREGAR  ==============================*/
 .espera-usuario {
@@ -190,7 +237,7 @@ html{
     border-radius: 50%;
     background-color: rgb(56, 65, 153);
     border: 8px dotted rgba(58, 56, 56, 0.1);
-    border-left-color:rgb(243, 218, 76);
+    border-left-color: rgb(243, 218, 76);
     animation: spin 1s linear infinite;
     margin: auto;
 }
@@ -202,3 +249,38 @@ html{
 }
 
 
+
+
+#rodape {
+    margin-top:2%;
+    bottom:0;
+    position: relative;
+    float:left;
+    height: 150px;
+    background-color: #344146;
+    color:#f4f4f4;
+    font-size: 20px;
+    font-weight:500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#rodape span{
+    font-weight:700;
+    color: rgb(248, 244, 15);
+}
+#rodape div{
+    margin-top:10px;
+}
+
+#rodape a{
+    text-decoration: none;
+    color: #f0e7ec;
+    padding: 4px;
+}
+
+#rodape a:hover{
+    text-decoration: none;
+    border:1px solid;
+    border-color: rgba(248, 246, 117, 0.801);
+}

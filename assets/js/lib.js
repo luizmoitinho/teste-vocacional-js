@@ -1,25 +1,24 @@
 
 
-const qtdQuestoes =1;
+const qtdQuestoes =21;
 
 window.addEventListener("load",function(){
+    $('html, body').animate( { scrollTop: 0});
     let btnEnviar =  document.getElementById("btnEnviar");
-   // btnEnviar.addEventListener("load",function(){
+    btnEnviar.addEventListener("load",function(){
         let inputsRadios =  getInputsRadio();
         let respostas = new Object();
         let condicaoFormulario = validarFormulario(inputsRadios,respostas)
         if(condicaoFormulario==true){
-           // carregar();
+           carregar();
             processarRespostas(respostas,function(callback){
-               // destroiCarregar()
+               destroiCarregar()
             });
-        }
-        else{
-            //questoes em branco
-            alert("Assinale todas as questoes!!");
-        }
-
-    //});
+       }
+       else{
+           alert("Assinale todas as questoes!!");
+       }
+    });
 });
 
 function processarRespostas(questoes,callback){
