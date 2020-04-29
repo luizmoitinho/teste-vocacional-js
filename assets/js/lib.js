@@ -3,13 +3,13 @@
 const qtdQuestoes =21;
 
 window.addEventListener("load",function(){
-    $('html, body').animate( { scrollTop: 0});
+   // $('html, body').animate( { scrollTop: 0});
     let btnEnviar =  document.getElementById("btnEnviar");
     btnEnviar.addEventListener("click",function(){
         let inputsRadios =  getInputsRadio();
         let respostas = new Object();
         let condicaoFormulario = validarFormulario(inputsRadios,respostas)
-        if(condicaoFormulario==true){
+        if(condicaoFormulario === true){
            carregar();
             processarRespostas(respostas,function(callback){
                destroiCarregar()
@@ -30,9 +30,7 @@ function processarRespostas(questoes,callback){
         
         success: function (html){
             callback(
-               
                 $('html, body').animate( { scrollTop: $(document).height()}, 700),
-                  
                 $('#perfil-profissional').css("visibility","visible"),
                 $('#perfil-profissional').html(html)
             );

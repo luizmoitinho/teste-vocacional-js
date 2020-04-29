@@ -14,7 +14,34 @@
 html {
     overflow-x: hidden;
 }
-
+ul li {
+    list-style-type: none;
+}
+.center{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    align-content: left;
+    text-align: left;
+}
+main .button-top{
+    float: right;
+}
+.button-top{
+    background-color:#812081;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: fixed;
+    display: flex;
+    justify-self: right;
+    float:right;
+    margin-top:530px;
+    color:#fff;
+    z-index: 100;
+    
+}
 #barra-navegacao {
     display: block;
     background-color: #812081;
@@ -143,7 +170,7 @@ html {
 
 
 #perfil-profissional {
-    margin-top: 2%;
+    margin-top: 1%;
     visibility: hidden;
     display: flex;
     flex-direction: column;
@@ -184,27 +211,13 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     border-top: 1px solid #ccc;
 
 }
 
-.profissoes:first-child {
-    display: flex;
-    flex-direction: column;
-    border-right: 4px dotted #993399;
-    text-align: center;
-    margin-bottom: 2px;
-}
-
-.profissoes:last-child {
-    display: flex;
-    flex-direction: column;
-    text-align: center
-}
-
 @media (min-width: 751px) {
     .profissoes:first-child {
-        border-right: 4px dotted #993399;
         border-bottom: none;
     }
 }
@@ -212,7 +225,6 @@ html {
 @media (min-width: 250px) and (max-width: 750px) {
     .profissoes:first-child {
         border-right: none;
-        border-bottom: 4px dotted #993399;
     }
 }
 
@@ -249,38 +261,60 @@ html {
 }
 
 
+.social {
+    list-style: none;
+    position:relative;
+    margin:5px; auto;
+
+}
+.social li {
+    display:inline-block;
+    line-height: 32px;
+    margin-left:10px;
+    font-family:'Porta';
+    font-size: 40px;
+    padding:0 5px;
+}
+.social li:first-child{
+    display:inline-block;
+    line-height: 32px;
+    font-family:'Porta';
+    font-size: 40px;
+    padding:0 5px;
+}
+.social li a {
+    margin:0;
+    padding:0;
+    width:32px;
+    height:32px;
+    color: rgb(255, 255, 255);
+    transition: .2s;
+}
+.social li a:hover {
+    color:rgb(144, 199, 253);
+    transition: 0.5s;
+}
 
 
 #rodape {
-    margin-top:2%;
+
     bottom:0;
     position: relative;
     float:left;
     height: 150px;
-    background-color: #344146;
+    background-color: #2b2f31;
     color:#f4f4f4;
     font-size: 20px;
     font-weight:500;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
-#rodape span{
-    font-weight:700;
-    color: rgb(248, 244, 15);
-}
-#rodape div{
-    margin-top:10px;
-}
+
 
 #rodape a{
     text-decoration: none;
     color: #f0e7ec;
     padding: 4px;
-}
-
-#rodape a:hover{
-    text-decoration: none;
-    border:1px solid;
-    border-color: rgba(248, 246, 117, 0.801);
 }

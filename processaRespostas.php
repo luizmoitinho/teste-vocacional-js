@@ -23,17 +23,17 @@ else{
             <span class="titulo-perfil"><?php echo"Carreiras apropriadas"?></span>  
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-5 profissoes ">
-                            <span><?php echo"Esportista" ?></span>
-                            <span><?php echo"Artista Plástico"?></span>
-                            <span><?php echo"Ator"?></span>
-                            <span><?php echo"fotógrafo"?></span>
-                        </div>
-                        <div class="col-md-5 profissoes ">
-                            <span><?php echo"Administrador"?></span>
-                            <span><?php echo"Advogado"?></span>
-                            <span><?php echo" Engenheiro Químico/ Mecânico"?></span>
-                        <div>
+                        <ul class="col-md-6 center">
+                            <li><?php echo"Esportista" ?></li>
+                            <li><?php echo"Artista Plástico"?></li>
+                            <li><?php echo"Ator"?></li>
+                            <li><?php echo"fotógrafo"?></li>
+                        </ul>
+                        <ul class="col-md-6 center">
+                            <li><?php echo"Administrador"?></li>
+                            <li><?php echo"Advogado"?></li>
+                            <li><?php echo" Engenheiro Químico/ Mecânico"?></li>
+                        <ul>
                     </div>
                 </div>
         </div>
@@ -54,18 +54,18 @@ else{
                         <span class="titulo-perfil"><?php echo"Carreiras apropriadas"?></span>  
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-md-6 profissoes  ">
-                                        <span><?php echo"Esportista" ?></span>
-                                        <span><?php echo"Artista Plástico"?></span>
-                                        <span><?php echo"Ator"?></span>
-                                        <span><?php echo"Estilista"?></span>
-                                    </div>
-                                    <div class="col-md-6 profissoes  ">
-                                        <span><?php echo"Jornalista"?></span>
-                                        <span><?php echo"Médico"?></span>
-                                        <span><?php echo"Relações públicas"?></span>
-                                        <span><?php echo"Chefe de Cozinha"?></span>
-                                    <div>
+                                    <ul class="col-md-6 center">
+                                        <li><?php echo"Esportista" ?></li>
+                                        <li><?php echo"Artista Plástico"?></li>
+                                        <li><?php echo"Ator"?></li>
+                                        <li><?php echo"Estilista"?></li>
+                                    </ul>
+                                    <ul class="col-md-6 center">
+                                        <li><?php echo"Jornalista"?></li>
+                                        <li><?php echo"Médico"?></li>
+                                        <li><?php echo"Relações públicas"?></li>
+                                        <li><?php echo"Chefe de Cozinha"?></li>
+                                    <ul>
                                 </div>
                             </div>
                     </div>
@@ -84,15 +84,15 @@ else{
                         <span class="titulo-perfil"><?php echo"Carreiras apropriadas"?></span>  
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-md-5 profissoes right">
-                                        <span><?php echo"Administrador de Empresas" ?></span>
-                                        <span><?php echo"Advogado"?></span>
-                                        <span><?php echo"Engenheiro Mecânico/Químico"?></span>
-                                        <span><?php echo"Juíz de Direito"?></span>
-                                    </div>
-                                    <div class="col-md-5 profissoes left">
-                                        <span><?php echo"Promotor"?></span>
-                                    <div>
+                                    <ul class="col-md-6  center">
+                                        <li><?php echo"Administrador de Empresas" ?></li>
+                                        <li><?php echo"Advogado"?></li>
+                                        <li><?php echo"Promotor"?></li>
+                                    </ul>
+                                    <ul class="col-md-6  center">
+                                        <li><?php echo"Juíz de Direito"?></li>
+                                        <li><?php echo"Engenheiro Mecânico ou Químico"?></li>
+                                    <ul>
                                 </div>
                             </div>
                      
@@ -109,16 +109,17 @@ else{
                         <span class="titulo-perfil"><?php echo"Carreiras apropriadas"?></span>  
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-md-5 profissoes right">
-                                        <span><?php echo"Professor" ?></span>
-                                        <span><?php echo"Psicólogo"?></span>
-                                        <span><?php echo"Escritor"?></span>
-                                        <span><?php echo"Sociólogo"?></span>
-                                    </div>
-                                    <div class="col-md-5 profissoes left">
-                                        <span><?php echo"Promotor"?></span>
-                                        <span><?php echo"Jornalista"?></span>
-                                    <div>
+                                    <ul class="col-md-6  center">
+                                        <li><?php echo"Professor" ?></li>
+                                        <li><?php echo"Psicólogo"?></li>
+                                        <li><?php echo"Escritor"?></li>
+                                        
+                                    </ul>
+                                    <ul class="col-md-6  center">
+                                        <li><?php echo"Sociólogo"?></li>
+                                        <li><?php echo"Promotor"?></li>
+                                        <li><?php echo"Jornalista"?></li>
+                                    <ul>
                                 </div>
                             </div>
                      
@@ -135,18 +136,18 @@ else{
                         <span class="titulo-perfil"><?php echo"Carreiras apropriadas"?></span>  
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-md-5 profissoes right">
-                                        <span><?php echo"Analistas  de sistemas" ?></span>
-                                        <span><?php echo"Antropólogo"?></span>
-                                        <span><?php echo"Arquiteto / Engenheiro"?></span>
-                                        <span><?php echo"Matemático"?></span>
-                                    </div>
-                                    <div class="col-md-5 profissoes left">
-                                        <span><?php echo"Físico"?></span>
-                                        <span><?php echo"Militar"?></span>
-                                        <span><?php echo"Criador de software"?></span>
-                                        <span><?php echo"Ator"?></span>
-                                    <div>
+                                    <ul class="col-md-6 center">
+                                        <li><?php echo"Analistas  de sistemas" ?></li>
+                                        <li><?php echo"Antropólogo"?></li>
+                                        <li><?php echo"Arquiteto / Engenheiro"?></li>
+                                        <li><?php echo"Matemático"?></li>
+                                    </ul>
+                                    <ul class="col-md-6 center">
+                                        <li><?php echo"Físico"?></li>
+                                        <li><?php echo"Militar"?></li>
+                                        <li><?php echo"Criador de software"?></li>
+                                        <li><?php echo"Ator"?></li>
+                                    <ul>
                                 </div>
                             </div>
                      

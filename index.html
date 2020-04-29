@@ -5,15 +5,18 @@
 <head>
     <meta charset="utf-8">
     <title>Teste Vocacional</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" type="text/css" href="assets/css/estilo.css">
     <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css">
-
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body class="clear cor-fundo" id="corpo">
     <header id="barra-navegacao" class="navbar navbar-expand-lg">
         <span id="titulo">Teste <span class="cor-amarelo">Vocacional</span> </span>
-        
+
     </header>
     <main class="container-fluid">
         <div class="row">
@@ -63,7 +66,7 @@
                         <span class="titulo-pergunta">Você se descreveria como uma pessoa:</span>
                         <div>
                             <input class="radio-button" type="radio" name="questao3" value="a" id="q3a">
-                            <label for="q3a">Impulsiva e um tanto aventureira  </label>
+                            <label for="q3a">Impulsiva e um tanto aventureira </label>
                         </div>
                         <div>
                             <input type="radio" name="questao3" value="b" id="q3b">
@@ -79,7 +82,7 @@
                         </div>
 
                     </div>
-                    
+
                     <div class="questao">
                         <span class="titulo-pergunta">Você se considera uma pessoa:</span>
                         <div>
@@ -118,7 +121,7 @@
                             <input type="radio" name="questao5" value="d" id="q5d">
                             <label for="q5d">Engenhosidade e rapidez mental</label>
                         </div>
-                    </div>  
+                    </div>
                     <div class="questao">
                         <span class="titulo-pergunta">Costuma confiar mais em:</span>
                         <div>
@@ -143,7 +146,7 @@
                         <span class="titulo-pergunta">Quase sempre, você gosta de</span>
                         <div>
                             <input type="radio" name="questao7" value="a" id="q7a">
-                            <label for="q7a">Causar impacto: os “holofotes” o atraem  </label>
+                            <label for="q7a">Causar impacto: os “holofotes” o atraem </label>
                         </div>
                         <div>
                             <input type="radio" name="questao7" value="b" id="q7b">
@@ -216,27 +219,6 @@
                             <label for="q10d">Sistemas e construção</label>
                         </div>
                     </div>
-
-                    
-                    <div class="questao">
-                        <span class="titulo-pergunta">Antes de agir, você analisa:</span>
-                        <div>
-                            <input type="radio" name="questao11" value="a" id="q11a">
-                            <label for="q11a">Ferramentas, instrumentos e equipamentos  </label>
-                        </div>
-                        <div>
-                            <input type="radio" name="questao11" value="b" id="q11b">
-                            <label for="q11b"> ---  </label>
-                        </div>
-                        <div>
-                            <input type="radio" name="questao11" value="c" id="q11c">
-                            <label for="q11c">Pessoas de todos os níveis sociais e culturais</label>
-                        </div>
-                        <div>
-                            <input type="radio" name="questao11" value="d" id="q11d">
-                            <label for="q11d">Sistemas e construção</label>
-                        </div>
-                    </div>
                     <div class="questao">
                         <span class="titulo-pergunta">Gosta quando as pessoas:</span>
                         <div>
@@ -253,7 +235,7 @@
                         </div>
                         <div>
                             <input type="radio" name="questao12" value="d" id="q12d">
-                            <label for="q12d">>Reconhecem sua inteligência</label>
+                            <label for="q12d">Reconhecem sua inteligência</label>
                         </div>
                     </div>
                     <div class="questao">
@@ -390,25 +372,7 @@
                             <label for="q19d">Uma mente brilhante</label>
                         </div>
                     </div>
-                    <div class="questao">
-                        <span class="titulo-pergunta">Como você lida com a invasão de privacidade:</span>
-                        <div>
-                            <input type="radio" name="questao20" value="a" id="q20a">
-                            <label for="q20a">Simplesmente ignora</label>
-                        </div>
-                        <div>
-                            <input type="radio" name="questao20" value="b" id="q20b">
-                            <label for="q20b">Fica irritado </label>
-                        </div>
-                        <div>
-                            <input type="radio" name="questao20" value="c" id="q20c">
-                            <label for="q20c">Repreende a pessoa</label>
-                        </div>
-                        <div>
-                            <input type="radio" name="questao20" value="d" id="q20d">
-                            <label for="q20d">Repreende a pessoa</label>
-                        </div>
-                    </div>
+
                     <div class="questao">
                         <span class="titulo-pergunta">Frase que têm a ver com você:</span>
                         <div>
@@ -430,33 +394,39 @@
                     </div>
 
                 </form>
-                <div class="col-md-12 centro" >
+                <div class="col-md-12 centro">
                     <button class="btn btn-info  btn-lg" id="btnEnviar" type="submit">Enviar</button>
-                </div> 
+                </div>
             </div>
         </div>
     </main>
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12" id="perfil-profissional">
-                
             </div>
         </div>
     </div>
 
-
     <footer class="container-fluid">
         <div class="row">
             <div class="col-md-12" id="rodape">
-                <div> 
-                  <span class="cor-amarelo"> @Author: </span>Luiz Carlos Costa Moitinho -  MTI &copy; 2019
-                </div>
-                <div> 
-                  <span class="cor-amarelo"> @GIT: </span> <a href="https://github.com/luizmoitinho">Luizmoitinho</a>
-                </div>
+                <ul class="social">
+                    <li>
+                        <a target="_new" href="https://www.instagram.com/luizmoitinho/">
+                            <i class="fa fa-instagram "></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_new" href="https://github.com/luizmoitinho/">
+                            <i class="fa fa-github "></i>
+                        </a>
+                    </li>
+                </ul>
+                <h6>&copy; 2019 - 2020 | Luiz Moitinho</h6>
             </div>
         </div>
     </footer>
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/lib.js"></script>
 </body>
